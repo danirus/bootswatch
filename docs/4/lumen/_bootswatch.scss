@@ -94,8 +94,14 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Oxygen" !default;
   }
 }
 
+.btn-lg, .btn-group-lg > .btn {
+    padding: 0.4rem 1.5rem;
+    font-size: $font-size-lg;
+}
+
 .btn-sm, .btn-group-sm > .btn {
-  padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0.75rem;
+    font-size: $font-size-sm;
 }
 
 .btn-group-vertical {

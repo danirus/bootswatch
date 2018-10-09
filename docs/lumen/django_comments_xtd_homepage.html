@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>django-comments-xtd simple demo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="../4/lumen/bootstrap.css" media="screen">
-    <link rel="stylesheet" href="../_assets/css/custom.min.css">
-    <script>
-
-     var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '']);
-      _gaq.push(['_setDomainName', ""]);
-        _gaq.push(['_setAllowLinker', false]);
-      _gaq.push(['_trackPageview']);
-
-     (function() {
-       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-     })();
-
-    </script>
-  </head>
-  <body>
+    <head>
+        <meta charset="utf-8">
+        <title>django-comments-xtd simple demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="../4/lumen/bootstrap.css" media="screen">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col py-5">
+	                <h1 class="text-center">simple demo site</h1>
+	                <h4 class="text-center">Homepage</h4>
+                    <hr/>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <p>The Simple Demo features:</p>
+                    <ol>
+                        <li>An Articles App, with a model <code>Article</code> whose instances accept comments.</li>
+                        <li>Confirmation by mail is required before the comment hit the database, unless <code>COMMENTS_XTD_CONFIRM_EMAIL</code> is set to False. Authenticated users don't have to confirm comments.</li>
+                        <li>Follow up notifications via mail.</li>
+                        <li>Mute links to allow cancellation of follow-up notifications.</li>
+                        <li>It uses the template tag <code>render_markup_comment</code> to render comment content. So you can use line breaks, Markdown or reStructuredText to format comments. To use special formatting, start the comment with the line <code>#!&lt;markup-lang&gt;</code> being <code>&lt;markup-lang&gt;</code> any of the following:
+                            <ul>
+                                <li>markdown</li>
+                                <li>restructuredtext</li>
+                                <li>linebreaks</li>
+                            </ul></li>
+                        <li>No nested comments.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <p class="text-center">
+                        <a href="/articles/">Article list</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <hr/>
+                    <p class="text-center text-muted small">django-comments-xtd simple demo.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
