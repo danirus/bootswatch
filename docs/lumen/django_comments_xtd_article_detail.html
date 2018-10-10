@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>django-comments-xtd simple demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="../4/lumen/bootstrap.css" media="screen">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col pt-5 pb-4">
+	                <h1 class="text-center">simple demo site</h1>
+	                <h4 class="text-center">Article Detail</h4>
+                    <hr/>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col pb-4">
+                    <div class="text-center">
+                        <h1>Net Neutrality in Jeopardy</h1>
+                        <div class="small">Jan. 10, 2012, 3:53 p.m.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <article>
+                        <p>The battle over the future of the Internet is a power grab that pits well-heeled lobbyists, corrupt legislators, phony front groups and the world’s most powerful telecommunications companies against the rest of us — the millions of Americans who use the Internet every day, in increasingly inventive ways.</p>
+
+                        <p>Policymakers are public officials, and it’s their job to serve the public interest. You can play an important role by helping spread the word about Net Neutrality, meeting face to face with elected officials and urging them to protect the open Internet.</p>
+
+                        <p>You can start by urging the Senate to stand up for Net Neutrality. </p>
+                    </article>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-7 pt-3">
+                    <p class="text-center">
+                        <a href="django_comments_xtd_article_list.html">Back to the articles list</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-7">
+                    <div id="comments">
+                        <h5 class="text-center">
+                            There are 2 comments below.
+                        </h5>
+                        <div class="comment pt-4 pb-5">
+                            <h4 class="text-center">Post your comment</h4>
+                            <div class="card card-block pt-3">
+                                <form method="POST" action="/comments/post/">
+                                    <input type="hidden" name="csrfmiddlewaretoken" value="P2b9ouho1FUdKciw5rhb5CVw7rHObH2l2MRP7rHvG0bRoIrMgRRk9aWLvJOxf6fg">
+                                    <fieldset>
+                                        <input type="hidden" name="next" value="/comments/sent/">
+                                        <div class="alert alert-danger" data-comment-element="errors" hidden></div>
+                                        <div><input type="hidden" name="content_type" value="articles.article" id="id_content_type"></div>
+                                        <div><input type="hidden" name="object_pk" value="1" id="id_object_pk"></div>
+                                        <div><input type="hidden" name="timestamp" value="1539144525" id="id_timestamp"></div>
+                                        <div><input type="hidden" name="security_hash" value="9ef1c0a14fd431a7f88d6b929eecb064be83f4bf" id="id_security_hash"></div>
+                                        <div><input type="hidden" name="reply_to" value="0" id="id_reply_to"></div>
+                                        <div style="display:none"><input type="text" name="honeypot" id="id_honeypot"></div>
+                                        <div class="form-group">
+                                            <div class="offset-md-1 col-md-10">
+                                                <textarea name="comment" placeholder="Your comment" class="form-control" maxlength="3000" required="" id="id_comment"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="id_name" class="col-form-label col-md-3 text-right">Name</label>
+                                            <div class="col-md-7">
+                                                <input type="text" name="name" placeholder="name" class="form-control" required="" id="id_name">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="id_email" class="col-form-label col-md-3 text-right">Mail</label>
+                                            <div class="col-md-7">
+                                                <input type="text" name="email" placeholder="mail address" class="form-control" required="" id="id_email">
+                                                <span class="form-text small">Required for comment verification</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="id_url" class="col-form-label col-md-3 text-right">Link</label>
+                                            <div class="col-md-7">
+                                                <input type="text" name="url" placeholder="url your name links to (optional)" class="form-control" id="id_url">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="offset-md-3 col-md-7">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="followup" id="id_followup">
+                                                    <label class="form-check-label" for="id_followup">
+                                                        &nbsp;Notify me about follow-up comments
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <div class="form-group row">
+                                        <div class="offset-md-3 col-md-7">
+                                            <input type="submit" name="post" value="send" class="btn btn-primary">
+                                            <input type="submit" name="preview" value="preview" class="btn btn-secondary">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="comment-list">
+                            <ul id="comments" class="media-list">
+
+                                <li class="media">
+                                    <a name="c1"></a>
+                                    <div class="media-left"><img src="//www.gravatar.com/avatar/7dad9576f17272a6b3c2ad686627cc25?s=48&amp;d=mm" height="48" width="48"></div>
+                                    <div class="media-body">
+                                        <div class="comment">
+                                            <h6 class="media-heading">Oct. 6, 2018, 5:58 a.m.&nbsp;-&nbsp;<a href="https://danir.us" target="_new">Daniel</a>&nbsp;&nbsp;<a class="permalink" title="comment permalink" href="/comments/cr/8/1/#c1">¶</a></h6>
+                                            <p>My comment<br/></p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <a name="c3"></a>
+                                    <div class="media-left"><img src="//www.gravatar.com/avatar/7dad9576f17272a6b3c2ad686627cc25?s=48&amp;d=mm" height="48" width="48"></div>
+                                    <div class="media-body">
+                                        <div class="comment">
+                                            <h6 class="media-heading">Oct. 6, 2018, 6:01 a.m.&nbsp;-&nbsp;<a href="https://danir.us" target="_new">Daniel</a>&nbsp;&nbsp;<a class="permalink" title="comment permalink" href="/comments/cr/8/1/#c3">¶</a></h6>
+                                            <p>This is my comment.<br></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <hr/>
+                    <p class="text-center text-muted small">django-comments-xtd simple demo.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
