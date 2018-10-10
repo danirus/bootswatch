@@ -28,7 +28,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Oxygen" !default;
 }
 
 .bg-light {
-  background-color: #fff !important;
+  background-color: $light !important;
   border-color: darken(#fff, 5%);
 }
 
@@ -104,6 +104,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Oxygen" !default;
     font-size: $font-size-sm;
 }
 
+.btn-outline-secondary {
+    color: $gray-700;
+    border-color: $gray-400;
+    background-color: $white;
+}
+
 .btn-group-vertical {
   .btn + .btn {
     &:hover {
@@ -121,7 +127,43 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Oxygen" !default;
 // Typography ==================================================================
 
 .blockquote-footer {
-  color: $gray-600;
+  color: $white;
+}
+
+.comment {
+    & A.permalink {
+        display: none;
+    }
+    & .show-hover {
+        display: none;
+    }
+    & .mutedlink {
+        color: $text-muted;
+    }
+    & > .content > p:last-child, i
+    .preview > p:last-child  {
+        margin: 0px;
+    }
+    & > .content > p,
+    .preview > p {
+        line-height: 1.4em;
+        font-size: 92%;
+    }
+}
+
+.comment:hover {
+    & A.permalink {
+        display: inline;
+    }
+    & .show-hover {
+        display: block;
+    }
+    & .mutedlink {
+        color: $link-color;
+    }
+    & .mutedlink:hover {
+        color: $link-hover-color;
+    }
 }
 
 // Tables ======================================================================
