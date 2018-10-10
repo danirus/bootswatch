@@ -9518,7 +9518,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .bg-light {
-  background-color: #fff !important;
+  background-color: #f6f6f6 !important;
   border-color: #f2f2f2;
 }
 
@@ -9589,6 +9589,12 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 0.74rem;
 }
 
+.btn-outline-secondary {
+  color: #555;
+  border-color: #ced4da;
+  background-color: #fff;
+}
+
 .btn-group-vertical .btn + .btn:hover {
   margin-top: -1px;
   border-top-width: 1px;
@@ -9600,7 +9606,45 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .blockquote-footer {
+  color: #fff;
+}
+
+.comment A.permalink {
+  display: none;
+}
+
+.comment .show-hover {
+  display: none;
+}
+
+.comment .mutedlink {
   color: #999;
+}
+
+.comment > .content > p:last-child, .comment i .preview > p:last-child {
+  margin: 0px;
+}
+
+.comment > .content > p,
+.comment .preview > p {
+  line-height: 1.4em;
+  font-size: 92%;
+}
+
+.comment:hover A.permalink {
+  display: inline;
+}
+
+.comment:hover .show-hover {
+  display: block;
+}
+
+.comment:hover .mutedlink {
+  color: #2196f3;
+}
+
+.comment:hover .mutedlink:hover {
+  color: #0a6ebd;
 }
 
 .table-primary, .table-success, .table-info, .table-warning, .table-danger {
