@@ -50,12 +50,10 @@
                         <h5 class="text-center">
                             There are 2 comments below.
                         </h5>
-                        <div class="comment pt-4 pb-5">
-                            <div class="card card-block">
-                                <div class="card-header">
-                                    <h4 class="text-center">Post your comment</h4>
-                                </div>
-                                <form class="card-body" method="POST" action="/comments/post/">
+                        <div class="card card-block mt-4 mb-5 border-primary">
+                            <div class="card-body">
+                                <h4 class="card-title text-center pb-3">Post your comment</h4>
+                                <form method="POST" action="/comments/post/">
                                     <input type="hidden" name="csrfmiddlewaretoken" value="P2b9ouho1FUdKciw5rhb5CVw7rHObH2l2MRP7rHvG0bRoIrMgRRk9aWLvJOxf6fg">
                                     <fieldset>
                                         <input type="hidden" name="next" value="/comments/sent/">
@@ -101,8 +99,8 @@
                                             </div>
                                         </div>
                                     </fieldset>
-
-                                    <div class="form-group row mb-0">
+                                    
+                                    <div class="form-group row">
                                         <div class="offset-md-3 col-md-7">
                                             <input type="submit" name="post" value="send" class="btn btn-primary">
                                             <input type="submit" name="preview" value="preview" class="btn btn-secondary">
@@ -111,29 +109,26 @@
                                 </form>
                             </div>
                         </div>
-
-                        <div id="comment-list">
-                            <div id="comments" class="">
-
-                                <div class="media pb-2">
-                                    <a name="c1"></a>
-                                    <img class="mr-3" src="//www.gravatar.com/avatar/7dad9576f17272a6b3c2ad686627cc25?s=48&amp;d=mm" height="48" width="48">
-                                    <div class="media-body">
-                                        <div class="comment">
-                                            <h6>Oct. 6, 2018, 5:58 a.m.&nbsp;-&nbsp;<a href="https://danir.us" target="_new">Daniel</a>&nbsp;&nbsp;<a class="permalink" title="comment permalink" href="/comments/cr/8/1/#c1">¶</a></h6>
-                                            <p>My comment<br/></p>
-                                        </div>
+                        
+                        <div id="comments">
+                            <div class="media pb-2">
+                                <a name="c1"></a>
+                                <img class="mr-3" src="//www.gravatar.com/avatar/7dad9576f17272a6b3c2ad686627cc25?s=48&amp;d=mm" height="48" width="48">
+                                <div class="media-body">
+                                    <div class="comment">
+                                        <h6 class="mb-1 small">Oct. 6, 2018, 5:58 a.m.&nbsp;-&nbsp;<a href="https://danir.us" target="_new">Daniel</a>&nbsp;&nbsp;<a class="permalink" title="comment permalink" href="/comments/cr/8/1/#c1">¶</a></h6>
+                                        <p>My comment<br/></p>
                                     </div>
                                 </div>
-
-                                <div class="media pb-2">
-                                    <a name="c3"></a>
-                                    <img class="mr-3" src="//www.gravatar.com/avatar/7dad9576f17272a6b3c2ad686627cc25?s=48&amp;d=mm" height="48" width="48">
-                                    <div class="media-body">
-                                        <div class="comment">
-                                            <h6>Oct. 6, 2018, 6:01 a.m.&nbsp;-&nbsp;<a href="https://danir.us" target="_new">Daniel</a>&nbsp;&nbsp;<a class="permalink" title="comment permalink" href="/comments/cr/8/1/#c3">¶</a></h6>
-                                            <p>This is my comment.<br></p>
-                                        </div>
+                            </div>
+                            
+                            <div class="media pb-2">
+                                <a name="c3"></a>
+                                <img class="mr-3" src="//www.gravatar.com/avatar/7dad9576f17272a6b3c2ad686627cc25?s=48&amp;d=mm" height="48" width="48">
+                                <div class="media-body">
+                                    <div class="comment">
+                                        <h6 class="mb-1 small">Oct. 6, 2018, 6:01 a.m.&nbsp;-&nbsp;<a href="https://danir.us" target="_new">Daniel</a>&nbsp;&nbsp;<a class="permalink" title="comment permalink" href="/comments/cr/8/1/#c3">¶</a></h6>
+                                        <p>This is my comment.<br></p>
                                     </div>
                                 </div>
                             </div>
