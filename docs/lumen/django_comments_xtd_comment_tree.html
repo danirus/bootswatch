@@ -2,24 +2,39 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>django-comments-xtd simple demo</title>
+        <title>django-comments-xtd comp demo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet"
+              href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+              integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+              crossorigin="anonymous">
         <link rel="stylesheet" href="../4/lumen/bootstrap.css" media="screen">
     </head>
     <body>
         <div class="container">
-            <div class="row">
-                <div class="col pt-5 pb-4">
-	                <h1 class="text-center">simple demo site</h1>
-	                <h4 class="text-center">Article Detail</h4>
-                    <hr/>
-                </div>
+            <div class="d-flex py-4">
+                <h2 class="mr-auto">comp demo</h2>
+                <nav class="nav nav-pills flex-column flex-sm-row align-self-center">
+                    <a class="flex-sm-fill text-sm-center nav-link active" href="#">Home</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="#">articles</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="#">quotes</a>
+                    <a class="flex-sm-fill text-sm-center nav-link" href="#">comments</a>
+                    <div class="dropdown">
+                        <a class="flex-sm-fill text-sm-center nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">English</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">español, Spanish</a>
+                            <a class="dropdown-item" href="#">suomi, Finnish</a>
+                            <a class="dropdown-item" href="#">français, French</a>
+                        </div>
+                    </div>
+                    
+                </nav>
             </div>
         </div>
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col pb-4">
+                <div class="col py-4">
                     <div class="text-center">
                         <h1>Net Neutrality in Jeopardy</h1>
                         <div class="small">Jan. 10, 2012, 3:53 p.m.</div>
@@ -48,14 +63,12 @@
                 <div class="col-md-7">
                     <div id="comments">
                         <h5 class="text-center">
-                            There are 2 comments below.
+                            There are 3 comments below.
                         </h5>
-                        <div class="comment pt-4 pb-5">
-                            <div class="card card-block">
-                                <div class="card-header">
-                                    <h4 class="text-center">Post your comment</h4>
-                                </div>
-                                <form class="card-body" method="POST" action="/comments/post/">
+                        <div class="card card-block mt-4 mb-5 border-primary">
+                            <div class="card-body">
+                                <h4 class="card-title text-center pb-3">Post your comment</h4>
+                                <form method="POST" action="/comments/post/">
                                     <input type="hidden" name="csrfmiddlewaretoken" value="P2b9ouho1FUdKciw5rhb5CVw7rHObH2l2MRP7rHvG0bRoIrMgRRk9aWLvJOxf6fg">
                                     <fieldset>
                                         <input type="hidden" name="next" value="/comments/sent/">
@@ -101,8 +114,8 @@
                                             </div>
                                         </div>
                                     </fieldset>
-
-                                    <div class="form-group row mb-0">
+                                    
+                                    <div class="form-group row">
                                         <div class="offset-md-3 col-md-7">
                                             <input type="submit" name="post" value="send" class="btn btn-primary">
                                             <input type="submit" name="preview" value="preview" class="btn btn-secondary">
@@ -111,29 +124,119 @@
                                 </form>
                             </div>
                         </div>
-
-                        <div id="comment-list">
-                            <div id="comments" class="">
-
-                                <div class="media pb-2">
-                                    <a name="c1"></a>
-                                    <img class="mr-3" src="//www.gravatar.com/avatar/7dad9576f17272a6b3c2ad686627cc25?s=48&amp;d=mm" height="48" width="48">
-                                    <div class="media-body">
-                                        <div class="comment">
-                                            <h6>Oct. 6, 2018, 5:58 a.m.&nbsp;-&nbsp;<a href="https://danir.us" target="_new">Daniel</a>&nbsp;&nbsp;<a class="permalink" title="comment permalink" href="/comments/cr/8/1/#c1">¶</a></h6>
-                                            <p>My comment<br/></p>
+                        
+                        <div id="comment-tree">
+                            <div class="media" id="c2">
+                                <img class="mr-3" src="http://www.gravatar.com/avatar/5449ef794aac7ca5096edbf437bd2675?s=48&amp;d=mm" width="48" height="48">
+                                <div class="media-body">
+                                    <div class="comment pb-3">
+                                        <a name="c2"></a>
+                                        <h6 class="mb-1 small d-flex">
+                                            <div class="mr-auto">
+                                                Oct. 11, 2018, 5:39 a.m. - <span>Listillo</span>&nbsp;&nbsp;<a class="permalink" href="/comments/cr/12/1/#c2">¶</a>
+                                            </div>
+                                            <a class="mutedlink" href="/admin/login/?next=/comments/flag/2/"><i class="fas fa-flag" title="flag comment as inappropriate"></i></a>
+                                        </h6>
+                                        <div class="content">
+                                            <p>I disagree with this and that, but I very much like turumbeer and turumbar...</p>
+                                        </div>
+                                        <span id="feedback-2" class="small"><span><a href="#" class="mutedlink"><i class="fas fa-thumbs-up" title="I like it"></i></a></span><span class="text-muted">&nbsp;|&nbsp;</span><span><a href="#" class="mutedlink"><i class="fas fa-thumbs-down" title="I dislike it"></i></a></span></span><span>&nbsp;&nbsp;&nbsp;<span class="text-muted">•</span>&nbsp;&nbsp;<a class="small mutedlink" href="/comments/reply/2/">Reply</a></span>
+                                    </div>
+                                    <div class="media" id="c3">
+                                        <img class="mr-3" src="http://www.gravatar.com/avatar/628bbb5a2f5703337746761569fdff93?s=48&amp;d=mm" width="48" height="48">
+                                        <div class="media-body">
+                                            <div class="comment pb-3">
+                                                <a name="c3"></a>
+                                                <h6 class="mb-1 small d-flex">
+                                                    <div class="mr-auto">
+                                                        Oct. 11, 2018, 5:43 a.m. - <span>My hero</span>&nbsp;&nbsp;<a class="permalink" href="/comments/cr/12/1/#c3">¶</a>
+                                                    </div>
+                                                    <a class="mutedlink" href="/admin/login/?next=/comments/flag/3/"><span class="glyphicon glyphicon-flag" title="flag comment as inappropriate"></span></a>
+                                                </h6>
+                                                <div class="content">
+                                                    <p>Doo bi doo bi, dee dee daa! It's in our own interest. Therefore I fully support it! And not only but also tralari. To say the least.</p>
+                                                </div>
+                                                <span id="feedback-3" class="small"><span><a href="#" class="mutedlink"><i class="fas fa-thumbs-up" title="I like it"></i></a></span><span class="text-muted">&nbsp;|&nbsp;</span><span><a href="#" class="mutedlink"><i class="fas fa-thumbs-down" title="I dislike it"></i></a></span></span><span>&nbsp;&nbsp;&nbsp;<span class="text-muted">•</span>&nbsp;&nbsp;&nbsp;<a class="small mutedlink" href="/comments/reply/3/">Reply</a></span>
+                                                <div class="card card-block mt-2 border-primary">
+                                                    <div class="card-body">
+                                                        <form method="POST">
+                                                            <input name="content_type" value="articles.article" type="hidden">
+                                                            <input name="object_pk" value="1" type="hidden">
+                                                            <input name="timestamp" value="1539236597" type="hidden">
+                                                            <input name="security_hash" value="3e84f62f1a3669e6caedff40a59f5a4c5b6670e5" type="hidden">
+                                                            <input name="reply_to" value="3" type="hidden">
+                                                            <fieldset>
+                                                                <div style="display: none;"><input name="honeypot" value="" type="text"></div>
+                                                                <div class="form-group">
+                                                                    <div class="offset-md-1 col-md-10">
+                                                                        <textarea required="" name="comment" id="id_comment"
+                                                                                  placeholder="Your comment" maxlength="3000"
+                                                                                  class="form-control form-control-sm"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label for="id_name" class="col-form-label col-form-label-sm col-md-3 text-right">Name</label>
+                                                                    <div class="col-md-7">
+                                                                        <input name="name" required="" id="id_name" value="" placeholder="name"
+                                                                               class="form-control form-control-sm" type="text">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label for="id_email" class="col-form-label col-form-label-sm col-md-3 text-right">Mail</label>
+                                                                    <div class="col-md-7">
+                                                                        <input name="email" required="" id="id_email" value=""
+                                                                               placeholder="mail address" class="form-control form-control-sm" type="text">
+                                                                        <span class="form-text" style="font-size:0.700rem">Required for comment verification.</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label for="id_url" class="col-form-label col-form-label-sm col-md-3 text-right">Link</label>
+                                                                    <div class="col-md-7">
+                                                                        <input name="url" id="id_url" value=""
+                                                                               placeholder="url your name links to (optional)"
+                                                                               class="form-control form-control-sm" type="text">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <div class="offset-md-3 col-md-7">
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input class="custom-control-input" name="followup" id="id_followup" value="on" type="checkbox">
+                                                                            <label class="custom-control-label small" for="id_followup">
+                                                                                &nbsp;Notify me about follow-up comments
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </fieldset>
+                                                            <div class="form-group row mb-0">
+                                                                <div class="offset-md-3 col-md-7">
+                                                                    <input name="post" value="send" class="btn btn-primary btn-sm" type="submit">
+                                                                    <input name="preview" value="preview" class="btn btn-secondary btn-sm" type="button">
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="media pb-2">
-                                    <a name="c3"></a>
-                                    <img class="mr-3" src="//www.gravatar.com/avatar/7dad9576f17272a6b3c2ad686627cc25?s=48&amp;d=mm" height="48" width="48">
-                                    <div class="media-body">
-                                        <div class="comment">
-                                            <h6>Oct. 6, 2018, 6:01 a.m.&nbsp;-&nbsp;<a href="https://danir.us" target="_new">Daniel</a>&nbsp;&nbsp;<a class="permalink" title="comment permalink" href="/comments/cr/8/1/#c3">¶</a></h6>
-                                            <p>This is my comment.<br></p>
+                            </div>
+                            <div class="media" id="c1">                                
+                                <img class="mr-3" src="http://www.gravatar.com/avatar/5449ef794aac7ca5096edbf437bd2675?s=48&amp;d=mm" width="48" height="48">
+                                <div class="media-body">
+                                    <div class="comment pb-3">
+                                        <a name="c1"></a>
+                                        <h6 class="mb-1 small d-flex">
+                                            <div class="mr-auto">
+                                                Oct. 11, 2018, 5:37 a.m. - <span><a href="https://spectrum.ieee.org">Another fellow</a></span>&nbsp;&nbsp;<a class="permalink" href="/comments/cr/12/1/#c1">¶</a>
+                                            </div>
+                                            <a class="mutedlink" href="/admin/login/?next=/comments/flag/1/"><span class="glyphicon glyphicon-flag" title="flag comment as inappropriate"></span></a>
+                                        </h6>
+                                        <div class="content">
+                                            <p>Awesome story, I do like it very much. Are you planning to write another chapter?</p>
                                         </div>
+                                        <span id="feedback-1" class="small"><span><a href="#" class="mutedlink"><i class="fas fa-thumbs-up" title="I like it"></i></a></span><span class="text-muted">&nbsp;|&nbsp;</span><span><a href="#" class="mutedlink"><i class="fas fa-thumbs-down" title="I dislike it"></i></a></span></span><span>&nbsp;&nbsp;&nbsp;<span class="text-muted">•</span>&nbsp;&nbsp;&nbsp;<a class="small mutedlink" href="/comments/reply/1/">Reply</a></span>
                                     </div>
                                 </div>
                             </div>
@@ -146,9 +249,21 @@
             <div class="row">
                 <div class="col">
                     <hr/>
-                    <p class="text-center text-muted small">django-comments-xtd simple demo.</p>
+                    <p class="text-center text-muted small">django-comments-xtd comp demo.</p>
                 </div>
             </div>
         </div>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>        
     </body>
 </html>
