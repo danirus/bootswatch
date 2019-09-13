@@ -27,6 +27,7 @@ module.exports = function (grunt) {
       journal:{},
       litera:{},
       lumen:{},
+      lumen_moin_alicia:{},
       lux:{},
       materia:{},
       minty:{},
